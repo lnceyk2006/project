@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/ccs.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        .header, .profile-section, .slider {
+            position: relative;
+            z-index: 2;
+        }
+        .header {
+            background-color: #5a3d2b;
+            color: white;
+            padding: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .profile-section {
+            background-color: transparent;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.5s;
+            margin-bottom: 20px;
+        }
+        .profile-section img:hover {
+            transform: scale(1.2);
+        }
+        .profile-section h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: #fff;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid #fff;
+            animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+            animation-delay: 0s, 2s;
+            animation-iteration-count: infinite;
+        }
+        .profile-section p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+        .show-link {
+            font-size: 1.5rem;
+            color: #5a3d2b;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .slider {
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 20px;
+            background-color: rgba(224, 215, 206, 0.7);
+            display: none; /* Initially hidden */
+        }
+        .slider-track {
+            display: flex;
+            animation: slide 20s linear infinite;
+        }
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+        .slider img {
+            width: 220px;
+            height: 220px;
+            border-radius: 10px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .slider img:hover {
+            transform: scale(1.2);
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+    <script>
+        function toggleSlider() {
+            var slider = document.querySelector('.slider');
+            if (slider.style.display === 'none' || slider.style.display === '') {
+                slider.style.display = 'block';
+            } else {
+                slider.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>My E-Portfolio In Media Information Literacy</h1>
+    </div>
+    <div class="profile-section">
+        <img src="images/lancearmenta.jpg" alt="Mark Lance Armenta ID">
+        <h2>Mark Lance L. Armenta</h2>
+        <p>12-Tolerance</p>
+    </div>
+    <a class="show-link" onclick="toggleSlider()">Show/Hide Projects</a>
+    <div class="slider">
+        <div class="slider-track">
+            <img src="images/project1.jpg" alt="Project 1">
+            <img src="images/project2.jpg" alt="Project 2">
+            <img src="images/project3.jpg" alt="Project 3">
+            <img src="images/project4.jpg" alt="Project 4">
+            <img src="images/project5.jpg" alt="Project 5">
+            <img src="images/project6.jpg" alt="Project 6">
+            <img src="images/project7.jpg" alt="Project 7">
+            <img src="images/project8.jpg" alt="Project 8">
+            <img src="images/project9.jpg" alt="Project 9">
+            <img src="images/project1.jpg" alt="Project 1">
+            <img src="images/project2.jpg" alt="Project 2">
+            <img src="images/project3.jpg" alt="Project 3">
+            <img src="images/project4.jpg" alt="Project 4">
+            <img src="images/project5.jpg" alt="Project 5">
+            <img src="images/project6.jpg" alt="Project 6">
+            <img src="images/project7.jpg" alt="Project 7">
+            <img src="images/project8.jpg" alt="Project 8">
+            <img src="images/project9.jpg" alt="Project 9">
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
